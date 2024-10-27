@@ -1,0 +1,732 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-image:linear-gradient(to bottom ,transparent 60%,rgba(0,0,0,0.6) 100%), url(Assests/hero.jpg);
+    min-height: 420px;
+    min-width: 200px;
+    height: 63vh;
+    width: 100%;
+    background-size: cover;
+}
+.navbar-nav .nav-item .nav-link{
+    color: white;
+    font-size: 18px;
+    padding: 8px;
+    margin: 0 20px;
+}
+.navbar-nav .nav-item .nav-link:hover{
+    /* color: #ef4f5f; */
+    color: lightgray;
+}
+.get-apps{
+    padding-bottom: 10px;
+}
+.get-apps span{
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+}
+.get-apps img{
+    height: 15px;
+}
+.get-apps span:hover{
+    color: lightgray;
+}
+.navbar{
+    padding: 17px;
+    width: 96vw;
+    max-width: 1100px;
+    min-width: 200px;
+    margin: auto;
+}
+.navbar-toggler{
+    border: none;
+}
+
+/* Displays Zomato Logo when Collapsed */
+.image-right {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.image-right img{
+    height: 25px;
+}
+
+/* Change the toggler icon to "X" when the navbar is collapsed */
+.navbar-toggler[aria-expanded="true"] span i.fas.fa-bars::before {
+    content: '\f00d'; /* Unicode for "X" icon in Font Awesome */
+    margin: 0;
+    color: black;
+    padding: 0;
+}
+
+/* Removing default transition of Bootstrap */
+.navbar .collapsing{
+    transition: none;
+}
+/* White Background when collapse */
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    opacity: 0;
+    display: none;
+    z-index: 1;
+}
+.logo{
+    height: 60px;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    flex-direction: column;
+    color: white;
+}
+.content h1{
+    font-size: 2.25rem;
+    margin-top: 1.875rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+.searchbar{
+    display: flex;
+    margin-top: 1.875rem;
+    border: solid 3px transparent;
+    border-radius: 8px;
+}
+.menu{
+    height: 50px;
+    background-color: white;
+    color: #696969;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 250px;
+    min-width: 90px;
+    width: 30vw;
+    padding: 0 10px;
+    border-radius: 8px 0 0 8px;
+}
+.menu .fa-caret-down{
+    border-right: solid 3px lightgray;
+    padding: 5px 10px;
+}
+.menu span{
+    margin: 5px;
+    font-size: 14px;
+}
+.search{
+    background-color: white;
+    overflow: hidden;
+    border-radius: 0 8px 8px 0;
+}
+.searchbar input{
+    height: 50px;
+    max-width: 500px;
+    min-width: 90px;
+    width: 50vw;
+    border: none;
+    outline: none;
+    border-radius: 0 8px 8px 0;
+}
+.searchbar:focus-within{
+    border: solid 3px #696969;
+    border-radius: 8px;
+}
+::placeholder{
+    font-size: 14px;
+}
+
+/* Main */
+/* Sec1 */
+.sec1{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 3.5rem 0;
+}
+.sec1 a{
+    text-decoration: none;
+}
+.card{
+    border-radius: 15px;
+    width: 30vw;
+    max-width: 360px;
+    transition: all 0.4s ease;
+}
+.card img{
+    border-radius: 15px 15px 0 0;
+    height: 160px;
+    object-fit: cover;
+}
+.card .content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px;
+    color: black;
+    
+}
+.card .content h5{
+    letter-spacing: 1px;
+    font-size: 1.25rem;
+    color: #363636;
+}
+.card .content p{
+    overflow:hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    white-space: nowrap;
+    font-size: 1rem;
+    color: #4F4F4F;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+
+/* Sec2 */
+.sec2{
+    width: 98vw;
+    margin:6rem auto;
+    max-width: 1100px;
+}
+.sec2 h1{
+    font-size: 2.25rem;
+    padding:0 10px;
+    color: #1C1C1C;
+}
+.collect{
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.collect h6{
+    font-size: 1.125rem;
+    font-weight: 400;
+    color:#696969;
+    min-width: 150px;
+}
+.sec2 .collect a{
+    text-decoration: none;
+    padding-left: 10px;
+    color: #FF7E8B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.collection{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    gap: 1rem;
+    padding: 10px;
+}
+.cards {
+    color: white;
+    height: 320px;
+    border-radius: 12px;
+    max-width: 270px;
+    position: relative;
+    overflow: hidden; 
+    transition: all 1s ease;
+}
+.cards img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.cards::before {
+    content: '';
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 12px;
+}
+.contents{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+.cards:hover{
+    transform: scale(1.05);
+    box-shadow: 3px 5px 8px 2px gray;
+}
+
+/* Sec3 */
+.sec3{
+    width: 98vw;
+    margin:6rem auto;
+    max-width: 1100px;
+}
+.sec3 h1{
+    font-size: 2.25rem;
+    min-width: 180px;
+    /* text-align: center; */
+}
+.city-name{
+    font-weight: 700;
+}
+.places{
+    margin: auto;
+    display: flex;
+    gap: 1rem;
+    min-width: 180px;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+}
+.places a{
+    text-decoration: none;
+}
+.box{
+    max-width: 350px;
+    width: 30vw;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(232, 232, 232);
+    padding: 15px;
+    border-radius: 1rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transition: all 0.4s ease;
+}
+.location{
+    width: 100%;
+}
+.box .location span{
+    font-size: 20px;
+    display: inline-block;
+    color: #1C1C1C;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: inherit;
+}
+.box .location p{
+    margin-bottom: 0;
+    font-size: 16px;
+    color: #363636;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.see .box{
+    justify-content: center;
+    gap: 1.5rem;
+}
+.see .box .location{
+    width: auto;
+}
+.places input[type=radio]{
+    display: none;
+}
+.hidden{
+    display: none;
+}
+.seemore:checked ~ .see{
+    display: none;
+}
+.seemore:checked ~ .hidden{
+    display: block;
+}
+.seeless{
+    display: none;
+}
+.seeless:checked ~ .hidden{
+    display: none;
+}
+
+.box:hover{
+    box-shadow: 4px 4px 10px  rgba(128, 128, 128, 0.1);
+}
+
+/* Footer */
+.download-app{
+    min-width: 200px;
+    width: 100%;
+    background-color: rgb(255, 251, 247);
+    padding:5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.app img{
+    width: 250px;
+}
+.app h2{
+    font-weight: 500;
+    font-size: 2.75rem;
+    color: #1C1C1C;
+    margin: 1rem 0;
+}
+.app p{
+    font-size: 1rem;
+    font-weight: 100;
+    letter-spacing: 0.45px;
+    width: 28.125rem;
+    color: #363636;
+}
+input[type="radio"]{
+    accent-color: rgb(239, 79, 95);
+}
+input[type="radio"]:hover,label{
+    cursor: pointer;
+}
+.types{
+    /* display: flex; */
+    gap: 1rem;
+    align-items: center;
+}
+.email{
+    display: flex;
+    gap: 1rem;
+    /* justify-content: center; */
+}
+.email input[type=text]:focus{
+    border-color: rgba(0, 100, 0, 0.547);
+}
+.phone:focus-within{
+    border-color: rgba(0, 100, 0, 0.547);
+}
+.email .emailhold{
+    outline: none;
+    border-radius: 10px;
+    padding: 0.75rem;
+    max-width: 300px;
+    width: 30vw;
+    margin: 1.75rem 0;
+    border: 0.1rem solid rgb(207, 207, 207);
+}
+.email input::placeholder{
+    font-size: 18px;
+    color: rgb(207, 207, 207);
+}
+.phone{
+    display: flex;
+    background-color: white;
+    border: 0.1rem solid rgb(207, 207, 207);
+    max-width: 300px;
+    width: 30vw;
+    padding: 0.75rem 0;
+    border-radius: 10px;
+    margin: 1.75rem 0;
+}
+.phone-fill{
+    display: none;
+    justify-content: center;
+}
+.types #phone:checked ~.phone-fill{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+.types #phone:checked ~.email-fill{
+    display: none;
+}
+.code{
+    display: flex;
+    gap: 0.4rem;
+    padding:0 10px;
+    border-right: 0.1rem solid rgb(207, 207, 207);
+}
+.number input[type=text]{
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    height: 24px;
+    width: 100%;
+    text-overflow: ellipsis;
+}
+.code{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+.email button{
+    margin: 1.75rem 0;
+    padding: 0.75rem 1.25rem;
+    border-radius: 10px;
+    background-color: #Ef4f5f;
+    border: none;
+    color: white;
+    transition: all 0.4s ease;
+    font-size: 16px;
+    outline: none;
+}
+.email button:hover{
+    background-color: #c8404e; 
+}
+.download p{
+    font-size: 14px;
+    color: #9C9C9C;
+}
+.download img{
+    height: 40px;
+    width: 137px;
+    /* height: 2.3rem;
+    width: 7.8775rem; */
+}
+.sources{
+    display: flex;
+    gap: 1.4rem;
+}
+.explore{
+    max-width: 1100px;
+    padding: 3.125rem 0;
+    margin: auto;
+    min-width: 200px;
+}
+.explore h1{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.explore .options{
+    border: 0.1rem solid rgb(207, 207, 207);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem 0;
+    font-size: 20px;
+    min-width: 200px;
+    margin: 1rem 0;
+    /* width: 100%; */
+}
+.explore .options label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1C1C1C;
+    transition: all 0.5s ease;
+}
+.explore .options label span{
+    transition: all 0.5s ease;
+}
+input[type=checkbox]{
+    display: none;
+}
+.explore .options input[type=checkbox]:checked ~ label span{
+    transform: rotate(-180deg);
+}
+.explore .options .explore-content a:hover{
+    color: black;
+}
+.explore .options .explore-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.3rem;
+    margin: 1rem;
+    color: #828282;
+    font-size: 16px;
+    transition: all 0.5s ease;
+}
+.explore-content i{
+    font-size: 5px;
+    padding-left: 5px;
+}
+.explore-content a{
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(130, 130, 130);
+}
+.explore-content{
+    max-height: 0px;
+    overflow: hidden;
+}
+input[type=checkbox]:checked ~.explore-content{
+    max-height: 2000px;
+}
+.restaurant-chain{
+    padding-right: 12rem;
+    justify-content: space-between;
+}
+.explore .options .cities-deliver{
+    min-width: 200px;
+    row-gap: 1rem;
+}
+.cities-deliver a{
+    width: 18%;
+    text-wrap: wrap;
+    min-width: 106px;
+    text-underline-offset: 4px;
+    /* max-width: 166px; */
+}
+.explore .options .cities-deliver .seemore{
+    font-weight: 600;
+    color: black;
+    text-decoration: underline;
+}
+/* Hide the "Get App" section when the navigation is collapsed, displaying image, color of text and white background*/
+@media (max-width: 767px) {
+    html{
+        font-size: 14px;
+    }
+    .get-apps{
+        display: none;
+    }
+    .navbar{
+        margin: 0 0;
+        padding: 5px;
+    }
+    .navbar-toggler[aria-expanded="true"] ~ .collapse .image-right {
+        display: block;
+        margin: 5px;
+    }
+    .navbar-nav .nav-item .nav-link{
+        padding: 15px;
+        color: black;
+    }
+    .navbar-toggler[aria-expanded="true"] + .overlay {
+        display: block;
+        opacity: 1;
+    }
+    .navbar button{
+        z-index: 2;
+    }
+    .navbar .collapse{
+        z-index: 2;
+        margin: 10px;
+    }
+    .sec1{
+        flex-wrap: wrap;
+    }
+    .card{
+        width: 40vw;
+        min-width: 180px;
+    }
+    .collection{
+        flex-wrap: wrap;
+    }
+    .cards{
+        width: 40vw;
+    }
+    .box{
+        width: 47vw;
+    }
+    .app p{
+        width: unset;
+        letter-spacing: normal;
+        line-height: normal;
+    }
+    .email button span:nth-child(2){
+        display: none;
+    }
+}
+
+/* Change size after 480px */
+@media screen and (max-width:480px){
+    html{
+        font-size: 10px;
+    }
+    .logo{
+        height: 12vw;
+        min-height: 35px;
+    }
+    .searchbar{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .searchbar .menu .fa-caret-down{
+        border-right:none;
+    }
+    .searchbar .menu{
+        border-radius: 8px;
+        max-width: none;
+        width: 70vw;
+        min-width: 160px;
+    }
+    .searchbar .search, .searchbar .searchinput{
+        min-width: 160px;
+        border-radius: 8px;
+        width: 70vw;
+    }
+    .sec1{
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem 1rem;
+    }
+    .card{
+        width: 80vw;
+        min-width: 180px;
+    }
+    main .sec2 .collect a{
+        display: none;
+    }
+    .collection{
+        flex-direction: column;
+        align-items: center;
+        /* margin: 1rem 1rem; */
+
+    }
+    .cards{
+        width: 80vw;
+        max-width: 400px;
+        min-width: 180px;
+        height: 200px;
+    }
+    .places{
+        flex-direction: column;
+        align-items: center;
+        min-width: 200px;
+        /* width: 100vw; */
+    }
+    .box{
+        width: 90vw;
+        min-width: 180px;
+    }
+    .app{
+        text-align: center;
+    }
+    .app img{
+        display: none;
+    }
+    .types{
+        justify-content: center;
+    }
+    .email{
+        justify-content: center;
+    }
+    .email-fill input[type=text]{
+        width: 50vw;
+        min-width: 80px;
+    }
+    .phone{
+        width: 50vw;
+        min-width: 80px;
+    }
+    .explore .options{
+        padding: 1px;
+        min-width: 200px;
+    }
+}
+@media (max-width:300px){
+    .sources{
+        display: flex;
+        flex-direction: column;
+    }
+}
